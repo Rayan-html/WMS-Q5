@@ -1,6 +1,14 @@
 <?php
 include 'db.php'; // Databaseverbinding
 
+
+session_start();
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    header('Location: admin_login.php'); // Verwijs naar de inlogpagina
+    exit;
+}
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $buffer_name = $_POST['buffer_name'];
     $description = $_POST['description'];

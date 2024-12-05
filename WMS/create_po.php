@@ -1,6 +1,14 @@
 <?php
 include 'db.php'; // Zorg dat je db.php juist is ingesteld voor de databaseverbinding
 
+
+session_start();
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    header('Location: admin_login.php'); // Verwijs naar de inlogpagina
+    exit;
+}
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Verkrijg gegevens van het formulier
     $po_number = $_POST['po_number'];
