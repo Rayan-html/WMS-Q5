@@ -1,0 +1,64 @@
+/* Override Bootstrap default styles */
+body {
+    font-family: 'Arial', sans-serif; /* Example font change */
+}
+
+.navbar {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+/* Add custom styles as needed */
+.my-4 { /* This class is already in Bootstrap for margin-top and bottom, adding here to explain it */
+    margin-top: 2rem !important; /* Adjust as needed */
+    margin-bottom: 2rem !important;
+}
+
+/* Style adjustments for the dropdown menu to align correctly */
+.navbar-nav .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+/* Content styles */
+.content-section {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.updates-list li {
+    margin-bottom: 0.5rem;
+}
+
+.update-date {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.news-item {
+    margin-bottom: 1.5rem;
+}
+
+.news-title {
+    font-weight: bold;
+}
+
+.news-summary {
+    margin-top: 0.5rem;
+}
+
+.news-link {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Image section styles */
+.image-section {
+    margin-top: 2rem;
+}
